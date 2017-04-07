@@ -60,14 +60,20 @@ if len(word) == 0:
 else:
     print(word)
 
+word_dict = {}
 # 単語の頻出度を調べる
 countWord = Counter(morphResult())
 for word, cnt in countWord.most_common():
-    ''' ２回以上出現しているワードを出力する場合
-    if cnt >= 2:
-        print(word)
-    '''
-    print(word, cnt)
-    
+    word_dict.update({word:cnt})
+    # print(word, cnt)
+
+# 辞書の最大値を表示
+# print(max(word_dict.values()))
+
+
+# 最大値のキーを表示
+for word, value in word_dict.items():
+    if value == max(word_dict.values()):
+        print(word)   
     
 
