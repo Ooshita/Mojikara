@@ -65,7 +65,7 @@ word_dict = {}
 countWord = Counter(morphResult())
 for word, cnt in countWord.most_common():
     word_dict.update({word:cnt})
-    # print(word, cnt)
+    print(word, cnt)
 
 # 辞書の最大値を表示
 # print(max(word_dict.values()))
@@ -74,6 +74,6 @@ for word, cnt in countWord.most_common():
 # 最大値のキーを表示
 for word, value in word_dict.items():
     if value == max(word_dict.values()):
-        print(word)   
+        print("最頻出単語: " + word)   
     
 
