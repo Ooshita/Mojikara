@@ -21,7 +21,7 @@ Pythonで書かれた，文章から画像のリンクを返す為のモジュ�
   export PYTHONPATH = '/Users/Ooshita/Mojikara/src/module/'
 ```
 
-あとはimportとしてご使用ください．  
+あとはimportしてご使用ください．  
   
 実際のサンプルはsrcディレクトリ以下のtestディレクトリのtest.pyを参考にしてください．
 
