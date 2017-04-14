@@ -1,4 +1,4 @@
-Mojikarai  
+Mojikara   
 ====
 Pythonで書かれた，文章から画像のリンクを返す為のモジュール
   
