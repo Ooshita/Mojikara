@@ -20,10 +20,10 @@ Pythonで書かれた，文章から画像のリンクを返す為のモジュ�
 ```
   export PYTHONPATH = '/Users/Ooshita/Mojikara/src/module/'
 ```
-
+  
 あとはimportしてご使用ください.  
-[import例]    
-====  
+
+## import例     
 ```python
 import search # 絶対必要なモジュール
 import get_feature_value # 絶対必要なモジュール
@@ -31,8 +31,7 @@ from collections import Counter
 from json import loads
 ```
   
-[具体的な使い方例]  
-====  
+## 具体的な使い方例
 ```python
 feature = get_feature_value.Get_feature
 # 文章を形態素解析して得られた名詞（キー）と頻出度の数(バリュー)を辞書として返します.
@@ -42,8 +41,7 @@ keywords = feature.morph_result("米軍が北朝鮮に軍事力を行使する�
 most_word = feature.most_word(keywords)
 ```
   
-[最大頻出ワードの画像リンクを取得する]  
-====  
+## 最大頻出ワードの画像リンクを取得する  
 ```python
 #importの追加
 from json import loads
