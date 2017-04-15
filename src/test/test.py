@@ -2,7 +2,6 @@
 
 import search
 import get_feature_value
-from collections import Counter
 from json import loads
 
 feature = get_feature_value.Get_feature
