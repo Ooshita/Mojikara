@@ -8,28 +8,10 @@ from json import loads
 feature = get_feature_value.Get_feature
 keywords = feature.morph_result("米軍が北朝鮮に軍事力を行使する場合に、出撃や後方支援の拠点になる在日米軍基地では、有事を想定したとみられる動きが出ている。")
 
+# keywordsディクショナリーから最大値を取得する
+most_word = feature.most_word(keywords)
 
-# 単語の頻出度を調べる
-word_dict = {}
-count_word = Counter(keywords)
-for word, cnt in count_word.most_common():
-    # 単語（キー）と頻度を辞書に入れる
-    word_dict.update({word:cnt})
-    #print(word, cnt)
-
-
-# 辞書の最大値を表示
-# print(max(word_dict.values()))
-
-
-# 最大値のキーを表示
-most_key = ""
-for word, value in word_dict.items():
-    if value == max(word_dict.values()):
-        #print("最頻出単語: " + word) 
-        most_key = word
-
-json = search.Search().execute(most_key)
+json = search.Search().execute(most_word)
 repos = loads(json)
 image_link = []
 for r in repos['items']:
