@@ -1,4 +1,5 @@
 import MeCab
+from collections import Counter
 keywords = []
 m = MeCab.Tagger(' -d /usr/local/lib/mecab/dic/mecab-ipadic-neologd')
     
@@ -17,3 +18,20 @@ class Get_feature:
                     keywords.append(node.surface)
                 node = node.next
         return keywords
+
+    def most_word(keywords):
+        # 単語の頻出度を調べる
+        word_dict = {}
+        count_word = Counter(keywords)
+        for word, cnt in count_word.most_common():
+            # 単語（キー）と頻度を辞書に入れる
+            word_dict.update({word:cnt})
+
+        # 最大値のキーを表示
+        most_key = ""
+        for word, value in word_dict.items():
+            if value == max(word_dict.values()):
+                #print("最頻出単語: " + word) 
+                most_key = word
+
+        return most_key
