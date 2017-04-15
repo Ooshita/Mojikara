@@ -55,7 +55,24 @@ for r in repos['items']:
     image_link.append(r['link'])
 ```
   
-実際のサンプルはsrcディレクトリ以下のtestディレクトリのtest.pyを参考にしてください．
+
+## 取得例
+```
+[  
+    'http://img01.militaryblog.jp/usr/n/e/w/news/Army_To_Hold_New_Pistol_Competition_Next_Year.jpg',  
+    'https://rpr.c.yimg.jp/im_sigggmYfnsj.d4gcxI55CytgsA---x800-n1/amd/20160207-00054179-roupeiro-000-9-view.jpg', 
+    'http://www.koreanwikiproject.com/wiki/images/d/d5/%E8%BB%8D.png', 
+    'http://blog-imgs-52.fc2.com/1/0/r/10rank/hires_090326-A-5049R-216d_convert_20121108202124.jpeg', 
+    'http://img01.militaryblog.jp/usr/r/o/m/romance/multicam_afghanistan_USArmy_02_1.jpg', 
+    'http://media.ws.irib.ir/image/4bk3e0bc801c9c50ks_620C350.jpg', 
+    'http://dnaimg.com/2012/12/21/gray-fox/title.jpg', 
+    'http://gendai.ismcdn.jp/mwimgs/a/b/640m/img_ab6fed7ec0295f20b61cea567040e42f103527.jpg', 
+    'http://livedoor.blogimg.jp/karapaia_zaeega/imgs/6/b/6b1116d4.jpg', 
+    'http://images.china.cn/attachement/jpg/site1004/20121013/000cf1bdd04811e3164420.jpg'    
+]
+```
+  
+また，実際のサンプルはsrcディレクトリ以下のtestディレクトリのtest.pyを参考にしてください．
 随時変更するかもしれないので，test.pyが最新のサンプルです．  
 
 
