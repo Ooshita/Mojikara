@@ -21,9 +21,44 @@ Pythonで書かれた，文章から画像のリンクを返す為のモジュ�
   export PYTHONPATH = '/Users/Ooshita/Mojikara/src/module/'
 ```
 
-あとはimportしてご使用ください．  
+あとはimportしてご使用ください.  
+[import例]    
+====  
+```python
+import search # 絶対必要なモジュール
+import get_feature_value # 絶対必要なモジュール
+from collections import Counter
+from json import loads
+```
+  
+[具体的な使い方例]  
+====  
+```python
+feature = get_feature_value.Get_feature
+# 文章を形態素解析して得られた名詞（キー）と頻出度の数(バリュー)を辞書として返します.
+keywords = feature.morph_result("米軍が北朝鮮に軍事力を行使する場合に、出撃や後方支援の拠点になる在日米軍基地では、有事を想定したとみられる動きが出ている。")
+
+# keywordsディクショナリーから最大値を取得する
+most_word = feature.most_word(keywords)
+```
+  
+[最大頻出ワードの画像リンクを取得する]  
+====  
+```python
+#importの追加
+from json import loads
+
+#最大頻出ワードをCustom Search APIを使用してjsonをGETする．
+json = search.Search().execute(most_word)
+repos = loads(json)
+image_link = []
+for r in repos['items']:
+    # image_linkリストに画像のリンクをappend（追加）する.
+    image_link.append(r['link'])
+```
   
 実際のサンプルはsrcディレクトリ以下のtestディレクトリのtest.pyを参考にしてください．
+随時変更するかもしれないので，test.pyが最新のサンプルです．  
 
 
 ## ライセンス  
