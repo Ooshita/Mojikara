@@ -1,4 +1,4 @@
-# -*- coding: UTF=8 -*-
+# -*- coding:utf-8 -*-
 from urllib import request
 from urllib.parse import urljoin, urlencode
 
