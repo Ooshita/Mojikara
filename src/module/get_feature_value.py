@@ -6,8 +6,7 @@ m = MeCab.Tagger(' -d /usr/local/lib/mecab/dic/mecab-ipadic-neologd')
 class Get_feature:
     # 起動時に一度だけ動く処理
     def __init__(self):
-        self.document = ""
-    
+        self.keywords = [] 
     def morph_result(document):
         node = m.parseToNode(document).next
         while node:
